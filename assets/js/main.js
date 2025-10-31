@@ -1,3 +1,36 @@
+  /**
+   * Certificate slider (services/sertifikat)
+   */
+  if (document.querySelector('.certificate-swiper')) {
+    new Swiper('.certificate-swiper', {
+      speed: 600,
+      loop: false,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.certificate-swiper .swiper-button-next',
+        prevEl: '.certificate-swiper .swiper-button-prev',
+      },
+      pagination: {
+        el: '.certificate-swiper .swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
+    });
+  }
 /**
 * Template Name: MyResume
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
