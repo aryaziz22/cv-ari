@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo-icon.ico" rel="icon">
+  <link href="assets/img/logo-icon.ico" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -40,37 +40,48 @@
 
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
-
-    <nav id="navbar" class="navbar nav-menu">
-      <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Project</span></a>
-        </li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Licency</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
-
-  </header><!-- End Header -->
+  <!-- ======= Top Navbar ======= -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid custom-navbar-wrapper">
+      <nav class="custom-navbar">
+        <div class="custom-navbar-left">
+          <a href="#hero" class="custom-navbar-logo">Ari Abdul Aziz</a>
+        </div>
+        <button class="custom-navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#customNavbarNav" aria-controls="customNavbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse custom-navbar-collapse d-none d-lg-flex" id="customNavbarNav">
+          <ul class="custom-navbar-nav ms-auto">
+            <li><a class="custom-navbar-link active" href="#hero">Home</a></li>
+            <li><a class="custom-navbar-link" href="#about">About</a></li>
+            <li><a class="custom-navbar-link" href="#resume">Resume</a></li>
+            <li><a class="custom-navbar-link" href="#portfolio">Project</a></li>
+            <li><a class="custom-navbar-link" href="#services">Licency</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </nav>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggler = document.querySelector('.custom-navbar-toggler');
+      var navCollapse = document.querySelector('.custom-navbar-collapse');
+      var nav = navCollapse ? navCollapse.querySelector('.custom-navbar-nav') : null;
+      if (toggler && navCollapse && nav) {
+        toggler.addEventListener('click', function () {
+          toggler.classList.toggle('active');
+          navCollapse.classList.toggle('show');
+          nav.classList.toggle('show');
+        });
+      }
+    });
+  </script>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Ari Abdul Aziz</h1>
-      <p>I am a <span class="typed" data-typed-items="Undergraduate Informatics Engineering"></span>
-      </p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/ari-abdul-aziz-b7776224a/" class="linkedin"><i
-            class="bx bxl-linkedin"></i></a>
-        <a href="mailto:ariabdulaziz830@gmail.com" class="email"><i class="bx bx-envelope"></i></a>
-        <a href="https://github.com/aryaziz22" class="github"><i class="bx bxl-github"></i></a>
-      </div>
+    <div class="container hero-content" data-aos="zoom-in" data-aos-delay="100">
     </div>
   </section><!-- End Hero -->
 
@@ -80,7 +91,7 @@
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title mt-5">
           <h2>About Me</h2>
         </div>
 
@@ -138,7 +149,7 @@
     <section id="skills" class="skills section-bg">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title mt-5">
           <h2>Skills</h2>
         </div>
 
@@ -149,42 +160,48 @@
             <div class="progress">
               <span class="skill">HTML <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">CSS & SCSS <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">JavaScript <i class="val">70%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">React.js <i class="val">65%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">Node.js <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">PHP <i class="val">70%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
@@ -195,42 +212,48 @@
             <div class="progress">
               <span class="skill">Laravel <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">Java <i class="val">65%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">Figma (UI/UX Design) <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">IoT (ESP8266/ESP32) <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">API Integration <i class="val">65%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">MySQL & Database <i class="val">70%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div>
 
@@ -245,7 +268,7 @@
     <section id="resume" class="resume">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title mt-5">
           <h2>Summary</h2>
           <p>Below is a brief summary of my educational background and project experience during my studies.</p>
         </div>
@@ -273,8 +296,12 @@
               <h5>Mar 2025 - Jun 2025</h5>
               <p><em>UI/UX Designer & Web Developer Intern</em></p>
               <ul>
-                <li><strong>UI/UX Design with Figma:</strong> Collaborated with a professional team to design a complete charity campaign website (Cheerity), producing lo-fi and hi-fi prototypes, user flows, and interactive demos using Figma for real client needs.</li>
-                <li><strong>Web Development with React & Node.js:</strong> Developed and deployed a production-grade music and movie review web application (FindFun), implementing responsive UI, API integration, and agile teamwork in a real-world environment.</li>
+                <li><strong>UI/UX Design with Figma:</strong> Collaborated with a professional team to design a complete
+                  charity campaign website (Cheerity), producing lo-fi and hi-fi prototypes, user flows, and interactive
+                  demos using Figma for real client needs.</li>
+                <li><strong>Web Development with React & Node.js:</strong> Developed and deployed a production-grade
+                  music and movie review web application (FindFun), implementing responsive UI, API integration, and
+                  agile teamwork in a real-world environment.</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -282,8 +309,12 @@
               <h5>Jul 2025 - Nov 2025</h5>
               <p><em>Full Stack Web Developer Intern</em></p>
               <ul>
-                <li><strong>Attendance & Timesheet Website (Laravel):</strong> Built and maintained an employee attendance and timesheet management system for internal company use, collaborating with HR and IT to ensure reliability, usability, and data security.</li>
-                <li><strong>E-Recruitment Website:</strong> Developed a web-based job portal for PT Pelindo Daya Sejahtera, working closely with stakeholders to enable job search, filtering, and online application submission, and delivering a user-friendly, scalable solution.</li>
+                <li><strong>Attendance & Timesheet Website (Laravel):</strong> Built and maintained an employee
+                  attendance and timesheet management system for internal company use, collaborating with HR and IT to
+                  ensure reliability, usability, and data security.</li>
+                <li><strong>E-Recruitment Website:</strong> Developed a web-based job portal for PT Pelindo Daya
+                  Sejahtera, working closely with stakeholders to enable job search, filtering, and online application
+                  submission, and delivering a user-friendly, scalable solution.</li>
               </ul>
             </div>
           </div>
@@ -295,7 +326,7 @@
     <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title mt-5">
           <h2>Project Results</h2>
           <p>Discover a collection of projects I have created during my studies as a student at Politeknik Negeri
             Jember, showcasing my various skills in web development, design, and more. Each project is proof of my
@@ -381,13 +412,15 @@
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/attendance-timesheet.png" class="img-fluid" alt="Attendance & Timesheet Website">
+              <img src="assets/img/portfolio/attendance-timesheet.png" class="img-fluid"
+                alt="Attendance & Timesheet Website">
               <div class="portfolio-info">
                 <h4>Attendance & Timesheet Website</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/attendance-timesheet.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                    title="Attendance & Timesheet Website - CV Alkas Triyasa Adhimukti"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/portfolio/attendance-timesheet.png" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Attendance & Timesheet Website - CV Alkas Triyasa Adhimukti"><i
+                      class="bx bx-plus"></i></a>
                   <a href="forms/detail-8.html" class="portfolio-details-lightbox" data-glightbox="type: external"
                     title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
@@ -411,7 +444,8 @@
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/pelindo.png" class="img-fluid" alt="E-Recruitment PT Pelindo Daya Sejahtera">
+              <img src="assets/img/portfolio/pelindo.png" class="img-fluid"
+                alt="E-Recruitment PT Pelindo Daya Sejahtera">
               <div class="portfolio-info">
                 <h4>E-Recruitment PT Pelindo Daya Sejahtera</h4>
                 <p>Web</p>
@@ -424,21 +458,21 @@
               </div>
             </div>
           </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-iot">
-              <div class="portfolio-wrap">
-                <img src="assets/img/portfolio/aquagrow.png" class="img-fluid" alt="IoT AquaGrow">
-                <div class="portfolio-info">
-                  <h4>IoT AquaGrow</h4>
-                  <p>IoT</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/portfolio/aquagrow.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="IoT-Based Hydroponic Monitoring and Control System (AquaGrow)"><i class="bx bx-plus"></i></a>
-                    <a href="forms/detail-9.html" class="portfolio-details-lightbox" data-glightbox="type: external"
-                      title="Portfolio Details"><i class="bx bx-link"></i></a>
-                  </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-iot">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/aquagrow.png" class="img-fluid" alt="IoT AquaGrow">
+              <div class="portfolio-info">
+                <h4>IoT AquaGrow</h4>
+                <p>IoT</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/aquagrow.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="IoT-Based Hydroponic Monitoring and Control System (AquaGrow)"><i class="bx bx-plus"></i></a>
+                  <a href="forms/detail-9.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                    title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
+          </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/cheerity.png" class="img-fluid" alt="Cheerity UI/UX Design">
@@ -462,9 +496,10 @@
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title mt-5">
           <h2>Certificates & Licenses</h2>
-          <p>Below are some certificates I have obtained or participated in during my studies at Politeknik Negeri Jember.</p>
+          <p>Below are some certificates I have obtained or participated in during my studies at Politeknik Negeri
+            Jember.</p>
         </div>
 
         <!-- Swiper Slider for Certificates -->
@@ -477,7 +512,8 @@
                   <img src="assets/img/sertifikat/sertif1.png" class="img-fluid" alt="UI/UX Bootcamp">
                   <div class="certificate-hover-overlay">
                     <h3>UI/UX Bootcamp</h3>
-                    <a href="assets/img/sertifikat/sertif1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    <a href="assets/img/sertifikat/sertif1.png" data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
                       title='<h4>UI/UX Bootcamp</h4><p>"BOOST YOUR SKILL (The Importance of User Experience)" Bootcamp organized by the Informatics Engineering Study Program, Campus 3, Nganjuk Regency, Politeknik Negeri Jember in collaboration with Appolonia on March 18 - 19, 2023.</p>'>
                       <span class="certificate-plus-btn"><i class="bx bx-plus"></i></span>
                     </a>
@@ -492,7 +528,8 @@
                   <img src="assets/img/sertifikat/sertif2.png" class="img-fluid" alt="Digital Literacy Seminar">
                   <div class="certificate-hover-overlay">
                     <h3>Digital Literacy Seminar</h3>
-                    <a href="assets/img/sertifikat/sertif2.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    <a href="assets/img/sertifikat/sertif2.png" data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
                       title='<h4>Digital Literacy Seminar</h4><p>Digital Literacy for Generation Z Students in Higher Education in East Java Province organized by the Directorate of Informatics Empowerment on April 13, 2023.</p>'>
                       <span class="certificate-plus-btn"><i class="bx bx-plus"></i></span>
                     </a>
@@ -507,7 +544,8 @@
                   <img src="assets/img/sertifikat/sertif3.jpg" class="img-fluid" alt="AI Seminar">
                   <div class="certificate-hover-overlay">
                     <h3>AI Seminar</h3>
-                    <a href="assets/img/sertifikat/sertif3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    <a href="assets/img/sertifikat/sertif3.jpg" data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
                       title='<h4>AI Seminar</h4><p>"Create Website From Scratch With AI" seminar organized by Niaga Hoster with Heyjaz as the speaker on September 1, 2023.</p>'>
                       <span class="certificate-plus-btn"><i class="bx bx-plus"></i></span>
                     </a>
@@ -554,7 +592,8 @@
                   <img src="assets/img/sertifikat/1_11zon.png" class="img-fluid" alt="React JS Class">
                   <div class="certificate-hover-overlay">
                     <h3>React JS Class</h3>
-                    <a href="assets/img/sertifikat/1_11zon.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    <a href="assets/img/sertifikat/1_11zon.png" data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
                       title='<h4>React JS Class</h4><p>"BuildWithAngga - React JavaScript" class organized by BuildWithAngga, which I completed in December 2024.</p>'>
                       <span class="certificate-plus-btn"><i class="bx bx-plus"></i></span>
                     </a>
@@ -566,7 +605,8 @@
             <div class="swiper-slide">
               <div class="certificate-hover-card">
                 <div class="certificate-img-hover-wrap">
-                  <img src="assets/img/sertifikat/celerates5.png" class="img-fluid" alt="Web Development & UI/UX Design">
+                  <img src="assets/img/sertifikat/celerates5.png" class="img-fluid"
+                    alt="Web Development & UI/UX Design">
                   <div class="certificate-hover-overlay">
                     <h3>Web Development & UI/UX Design</h3>
                     <a href="assets/img/sertifikat/celerates5.png" data-gallery="portfolioGallery"
@@ -615,7 +655,8 @@
             <div class="swiper-slide">
               <div class="certificate-hover-card">
                 <div class="certificate-img-hover-wrap">
-                  <img src="assets/img/sertifikat/celerates4.png" class="img-fluid" alt="Web Development & UI/UX Design">
+                  <img src="assets/img/sertifikat/celerates4.png" class="img-fluid"
+                    alt="Web Development & UI/UX Design">
                   <div class="certificate-hover-overlay">
                     <h3>Web Development & UI/UX Design</h3>
                     <a href="assets/img/sertifikat/celerates4.png" data-gallery="portfolioGallery"
@@ -647,7 +688,8 @@
             <div class="swiper-slide">
               <div class="certificate-hover-card">
                 <div class="certificate-img-hover-wrap">
-                  <img src="assets/img/sertifikat/celerates1.png" class="img-fluid" alt="Web Development & UI/UX Design">
+                  <img src="assets/img/sertifikat/celerates1.png" class="img-fluid"
+                    alt="Web Development & UI/UX Design">
                   <div class="certificate-hover-overlay">
                     <h3>Web Development & UI/UX Design</h3>
                     <a href="assets/img/sertifikat/celerates1.png" data-gallery="portfolioGallery"
@@ -679,8 +721,9 @@
       <p>Contact me on the social media below.</p>
       <div class="social-links">
         <a href="https://t.me/petaniabiezz" class="twitter"><i class="bx bxl-telegram"></i></a>
-        <a href="https://www.instagram.com/_abdzz0" class="instagram"><i
-            class="bx bxl-instagram"></i></a>
+        <a href="https://www.instagram.com/_abdzz0" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/ari-abdul-aziz-879b25210/" class="linkedin"><i
+            class="bx bxl-linkedin"></i></a>
         <a href="https://wa.me/6281323996824" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
       </div>
       <div class="copyright">
@@ -709,6 +752,34 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Highlight active navbar link based on scroll position
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = ['hero', 'about', 'resume', 'portfolio', 'services'];
+      const navLinks = document.querySelectorAll('.custom-navbar-link');
+      function activateMenu() {
+        let current = sections[0];
+        for (let i = 0; i < sections.length; i++) {
+          const section = document.getElementById(sections[i]);
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 80 && rect.bottom > 80) {
+              current = sections[i];
+              break;
+            }
+          }
+        }
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', activateMenu);
+      activateMenu();
+    });
+  </script>
 
 </body>
 
