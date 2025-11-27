@@ -1,3 +1,100 @@
+  /* Marquee Wrapper */
+  .skills-marquee .skill-icon img,
+  .skills-marquee .skill-icon svg,
+  .skills-marquee .skill-icon i {
+    width: 80px !important;
+    height: 80px !important;
+    font-size: 80px !important;
+    object-fit: contain;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .skills-marquee .skill-icon img,
+    .skills-marquee .skill-icon svg,
+    .skills-marquee .skill-icon i {
+      width: 60px !important;
+      height: 60px !important;
+      font-size: 60px !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .skills-marquee .skill-icon img,
+    .skills-marquee .skill-icon svg,
+    .skills-marquee .skill-icon i {
+      width: 40px !important;
+      height: 40px !important;
+      font-size: 40px !important;
+    }
+  }
+  .skills-marquee-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .skills-marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll 50s linear infinite;
+  }
+
+  .skills-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* Icon Styles */
+  .skill-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    transition: transform 0.3s ease;
+  }
+
+  .skill-icon:hover {
+    transform: scale(1.2);
+  }
+
+  .skill-icon i {
+    font-size: 60px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .skill-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #d8d8d8;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+
+  .skill-icon:hover .skill-name {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 768px) {
+    .skill-icon i {
+      font-size: 40px;
+    }
+    .skill-icon {
+      margin: 0 15px;
+    }
+  }
+
 /* Tailwind-style Custom Navbar */
 body {
   font-family: 'Inter', 'Open Sans', sans-serif;
