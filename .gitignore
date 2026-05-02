@@ -1,14 +1,54 @@
-# PHP files dengan credentials
-assets/php/
+# ========== SECURITY: Sensitive Files ==========
+# PHP files dengan credentials (simpan di local saja)
+assets/php/send-email.php
+assets/php/SmtpMailer.php
 
-# IDE
+# Environment files
+.env
+.env.local
+.env.*.local
+config/credentials.php
+
+# ========== IDE & EDITOR ==========
 .vscode/
 .idea/
 *.code-workspace
+*.sublime-project
+*.sublime-workspace
 
-# OS
+# ========== OS ==========
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+desktop.ini
 
-# Node modules (jika ada)
+# ========== DEVELOPMENT ==========
 node_modules/
+package-lock.json
+composer.lock
+vendor/
+
+# ========== LOGS & CACHE ==========
+*.log
+*.log.*
+logs/
+tmp/
+temp/
+cache/
+
+# ========== BACKUP & TEMPORARY ==========
+*.bak
+*.backup
+*~
+*.swp
+*.swo
+*.swn
+.tmp/
+
+# ========== SYSTEM ==========
+.gitkeep
+*.DS_Store
